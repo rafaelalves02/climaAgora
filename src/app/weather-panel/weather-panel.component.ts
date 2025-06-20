@@ -27,7 +27,7 @@ export class WeatherPanelComponent {
 
     const horaAtual = new Date().getHours();
 
-    if(horaAtual > 18 || horaAtual < 6) {
+    if(horaAtual >= 18 || horaAtual < 6) {
       this.dayNight = 'night';
     }
     else {
