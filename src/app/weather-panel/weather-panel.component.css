@@ -61,6 +61,7 @@ app-menu {
     font-size: 1.4rem;
     background: #ffffffc9;
     box-shadow: 5px 1px 1px #000000c5;
+    padding: 20px;
 }
 
 .location {

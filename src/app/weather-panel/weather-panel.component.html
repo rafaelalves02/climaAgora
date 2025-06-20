@@ -2,7 +2,7 @@
 
 <div class="box" [ngClass]="weatherData?.weather[0]?.main + ' ' + dayNight">
     <div class="locations" *ngIf="locations">
-        <h1>Selecione de qual estado é a sua cidade</h1>
+        <h1>Clique em umas das opções abaixo:</h1>
         <div (click)="obterClima(location)" class="location" *ngFor="let location of locations;let i = index">
             {{location.name}} - {{location.state}}
         </div>

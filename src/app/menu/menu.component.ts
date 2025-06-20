@@ -12,7 +12,7 @@ import { WeatherServiceService } from '../services/weather-service.service';
 })
 export class MenuComponent {
 
-  @Output() weatherInfo = new EventEmitter<{locations: any[], unit: string}>();
+  @Output() weatherInfo = new EventEmitter<{locations?: any[], unit?: string}>();
 
   constructor(private weatherService: WeatherServiceService){}
   formBuilder = inject(FormBuilder);
@@ -39,9 +39,9 @@ export class MenuComponent {
       console.log(data);
 
       this.weatherInfo.emit({
-      locations: this.locations,
-      unit: this.metricUnit
-    });
+        locations: this.locations,
+        unit: this.metricUnit
+      });
 
     });
   }
@@ -55,6 +55,6 @@ export class MenuComponent {
     else {
       this.metricUnit = 'standard';
     }
-  }
+  } 
 }
   
