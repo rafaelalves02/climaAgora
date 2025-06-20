@@ -1,0 +1,10 @@
+footer {
+    background: #fff;
+    box-shadow: 1px 0px 12px #00000079;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    margin-right: 10px;
+}

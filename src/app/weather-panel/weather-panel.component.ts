@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { MenuComponent } from "../menu/menu.component";
 import { CommonModule } from '@angular/common';
 import { WeatherServiceService } from '../services/weather-service.service';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-weather-panel',
-  imports: [MenuComponent, CommonModule],
+  imports: [MenuComponent, CommonModule, FooterComponent],
   templateUrl: './weather-panel.component.html',
   styleUrl: './weather-panel.component.css'
 })

@@ -12,7 +12,7 @@ import { WeatherServiceService } from '../services/weather-service.service';
 })
 export class MenuComponent {
 
-  @Output() weatherInfo = new EventEmitter<{locations?: any[], unit?: string}>();
+  @Output() weatherInfo = new EventEmitter<{locations: any[], unit: string}>();
 
   constructor(private weatherService: WeatherServiceService){}
   formBuilder = inject(FormBuilder);
