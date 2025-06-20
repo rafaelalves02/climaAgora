@@ -1,0 +1,182 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+}
+
+app-menu {
+    height: 73.2px;
+    flex-shrink: 0;
+}
+
+.box {
+    background: linear-gradient(to bottom, #e6f0ff, #fff);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box.Clear {
+    background: #87CEEB;
+}
+
+.box.Clear.night {
+    background: #3c3c3c;
+}
+
+.box.Clouds {
+    background: #B0C4DE;
+}
+
+.box.Rain {
+    background: #5F9EA0;
+}
+
+.box.Drizzle {
+    background: #A9A9A9;
+}
+
+.box.Thunderstorm {
+    background: #2F2F4F;
+}
+
+.box.Atmosphere {
+    background: #C0C0C0;
+}
+
+.inicial {
+    text-align: center;
+}
+
+.locations {
+    background: #ffffff72;
+    box-shadow: 2px 2px 2px #00000086;
+    width: 100%;
+    text-align: center;
+}
+
+.locations h1 {
+    font-size: 1.4rem;
+    background: #ffffffc9;
+    box-shadow: 5px 1px 1px #000000c5;
+}
+
+.location {
+    background: #ffffff72;
+    cursor: pointer;
+    padding: 10px 5px;
+    box-shadow: 1px 1px 1px #00000095;
+}
+
+.location:hover {
+    background: #5757ff;
+    color: #fff;
+    transition: .3s;
+}
+
+.cityInfo {
+    width: 100vw;
+    background: #ffffff72;
+    box-shadow: 1px 1px 1px #00000072;
+}
+
+.cityInfo h1 {
+    background: #ffffffc9;
+    box-shadow: 1px 1px 7px 0px #00000059;
+    padding: 10px 0 0 0;
+}
+
+.cityInfo h2 {
+    font-size: 1.1rem;
+    padding: 15px 0 0 10px;
+}
+
+.cityInfo p {
+    padding: 0 0 13px 10px;
+}
+
+.cityInfo h2, .cityInfo .temp, .cityInfo p{
+    display: inline-block;
+    width: 49%;
+}
+
+.temp {
+    display: flex;
+    font-size: 1.6rem;
+    align-items: center;
+    margin-top: -5px;
+}
+
+.temp img {
+    width: 50px;
+    margin: -12px;
+}
+
+.cityInfo.Clear .temp, .cityInfo.Clear .fellsLike {
+    color: #fad500;
+    text-shadow: 1px 1px 1px #000000bc;
+}
+
+.cityInfo.Clear.night .temp, .cityInfo.Clear.night .fellsLike {
+    color: #fff;
+}
+
+.cityInfo.Clouds .temp, .cityInfo.Clouds .fellsLike {
+    color: #6b6b6b;
+}
+
+.cityInfo.Rain .temp, .cityInfo.Rain .fellsLike {
+    color: #708090;
+}
+
+.cityInfo.Drizzle .temp, .cityInfo.Drizzle .fellsLike {
+    color: #7e7e7e;
+}
+
+.cityInfo.Thunderstorm .temp,.cityInfo.Thunderstorm .fellsLike {
+    color: #FFD700;
+}
+
+.cityInfo.Thunderstorm p, .cityInfo.Thunderstorm h2 {
+    color: #fff;
+}
+
+.cityInfo.Snow .temp, .cityInfo.Snow .fellsLike {
+    color: #ADD8E6;
+}
+
+.cityInfo.Atmosphere .temp, .cityInfo.Atmosphere .fellsLike {
+    color: #909090;
+}
+
+@media (min-width: 764px) {
+    .box {
+        justify-content: center;
+    }
+
+    .locations {
+        max-width: 800px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .locations h1 {
+        padding: 30px;
+    }
+
+    .cityInfo {
+        max-width: 800px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .cityInfo h1 {
+        padding: 20px;
+    }
+
+    .temp {
+        font-size: 2rem;
+    }
+}

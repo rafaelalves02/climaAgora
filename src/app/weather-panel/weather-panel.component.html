@@ -1,0 +1,23 @@
+<app-menu (weatherInfo)="receberDados($event)"></app-menu>
+
+<div class="box" [ngClass]="weatherData?.weather[0]?.main + ' ' + dayNight">
+    <div class="locations" *ngIf="locations">
+        <h1>Selecione de qual estado é a sua cidade</h1>
+        <div (click)="obterClima(location)" class="location" *ngFor="let location of locations;let i = index">
+            {{location.name}} - {{location.state}}
+        </div>
+    </div>
+    
+    <div class="cityInfo" [ngClass]="weatherData?.weather[0]?.main + ' ' + dayNight" *ngIf="weatherData && !locations">
+        <h1>tempo</h1>
+        <h2>Agora</h2>
+        <p>clima: {{weather}}</p>
+        <p class="temp"> {{ weatherData.main.temp | number:'1.0-0' }}°{{isCelsius}} <img src="http://openweathermap.org/img/wn/{{ weatherData.weather[0].icon }}@2x.png" alt="clima" /></p>
+        <p>humidade: {{weatherData.main.humidity}}%</p>
+        <p>Sensação termica: <span class="fellsLike">{{ weatherData.main.feels_like | number:'1.0-0' }}°{{isCelsius}}</span></p>
+    </div>
+
+    <div class="inicial" *ngIf="!locations && !weatherData">
+        <h1>Digite acima a cidade para ver o clima!</h1>
+    </div>
+</div>
